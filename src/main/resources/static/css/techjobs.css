@@ -44,3 +44,11 @@ label {
 .centered {
     text-align: center;
 }
+#jobListTables{
+width: 80%;
+margin-bottom: 20px;
+border: 1px solid black;
+}
+#jobRows{
+text-align: left;
+}

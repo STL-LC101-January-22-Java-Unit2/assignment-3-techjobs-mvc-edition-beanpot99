@@ -27,7 +27,7 @@ public class SearchController {
         return "search";
     }
 
-    @GetMapping(value="search/{searchType}/{searchTerm}")
+    @PostMapping(value="search/{searchType}/{searchTerm}")
     public String displaySearchResults(Model model, @PathVariable  String searchType, @PathVariable String searchTerm ){
     ArrayList<Job> jobs;
         if(searchTerm=="all" || searchTerm==""||searchTerm=="All"){

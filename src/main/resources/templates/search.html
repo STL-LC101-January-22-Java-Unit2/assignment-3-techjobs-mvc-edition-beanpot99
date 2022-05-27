@@ -35,8 +35,34 @@
     </form>
 
     <hr />
+    <table  th:each="job : ${jobs}" id="searchResultTable" >
 
-    <!-- TODO #4 - Loop over the search results to display all job fields. -->
+        <tr>
+            <td class="col-4">ID</td>
+            <td class="col-8"id="searchRows"th:text="${job.getId}"></td>
+        </tr>
+        <tr>
+            <td class="col-4">Name</td>
+            <td id="searchRows" th:text="${job.getName}"></td>
+        </tr>
+        <tr>
+            <td class="col-4">Employer</td>
+            <td id="searchRows" th:text="${job.getEmployer}"></td>
+        </tr>
+        <tr>
+            <td class="col-4">Location</td>
+            <td id="searchRows" th:text="${job.getLocation}"></td>
+        </tr>
+        <tr>
+            <td class="col-4">Position</td>
+            <td id="searchRows" th:text="${job.getPositionType}"></td>
+        </tr>
+        <tr>
+            <td class="col-4">Skill</td>
+            <td id="searchRows" th:text="${job.getCoreCompetency}"></td>
+        </tr>
+
+    </table>
 
 </div>
 

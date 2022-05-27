@@ -21,6 +21,7 @@ tr:nth-child(odd) {
 .centeredTable {
     margin-left: auto;
     margin-right: auto;
+    width:75%;
 }
 
 table.job-listing {
@@ -51,4 +52,7 @@ border: 1px solid black;
 }
 #jobRows{
 text-align: left;
+}
+#eachJob{
+text-align:left;
 }

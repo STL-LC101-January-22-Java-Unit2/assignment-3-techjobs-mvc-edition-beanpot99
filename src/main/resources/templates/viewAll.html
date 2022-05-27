@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/>/www.thymeleaf.org/"/>
+<head th:replace="fragments :: head">
+<body>
+<div th:replace="fragments :: page-header"></div>
+<div >
+    <table  th:each="job : ${jobs}" id="jobListTables" >
+
+        <tr>
+            <td class="col-4">ID</td>
+            <td class="col-8"id="jobRows"th:text="${job.getId}"></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

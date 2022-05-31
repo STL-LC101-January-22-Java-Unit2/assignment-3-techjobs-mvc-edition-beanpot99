@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.mvc.controllers;
-
+//GET=retrieving data from the server side
+//POST=creating/updating or deleting data
 
 import org.launchcode.techjobs.mvc.models.Job;
 import org.launchcode.techjobs.mvc.models.JobData;
@@ -33,6 +34,7 @@ public class ListController {
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
         tableChoices.put("coreCompetency", JobData.getAllCoreCompetency());
+        tableChoices.put("all", "All");
     }
 
     @GetMapping(value = "")
@@ -44,6 +46,7 @@ public class ListController {
         model.addAttribute("positions", JobData.getAllPositionTypes());
         model.addAttribute("skills", JobData.getAllCoreCompetency());
 
+
         return "list";
     }
 
@@ -53,6 +56,7 @@ public class ListController {
         if (column.equals("all")){
             jobs = JobData.findAll();
             model.addAttribute("title", "All Jobs");
+
         } else {
             jobs = JobData.findByColumnAndValue(column, value);
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);

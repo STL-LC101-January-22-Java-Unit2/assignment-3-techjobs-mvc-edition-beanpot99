@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.mvc.controllers;
-
+//GET=retrieving data from the server side
+//POST=creating/updating or deleting data
 
 import org.launchcode.techjobs.mvc.models.Job;
 import org.launchcode.techjobs.mvc.models.JobData;
